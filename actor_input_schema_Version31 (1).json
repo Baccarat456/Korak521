@@ -1,0 +1,54 @@
+{
+  "title": "Input schema of the Broken link & SEO Auditor scraper",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "startUrls": {
+      "title": "Start URLs",
+      "type": "array",
+      "description": "Seed URLs to start crawling from (site homepages or specific sections).",
+      "editor": "requestListSources",
+      "prefill": [
+        {
+          "url": "https://example.com"
+        }
+      ]
+    },
+    "maxRequestsPerCrawl": {
+      "title": "Max Requests per Crawl",
+      "type": "integer",
+      "description": "Maximum number of requests that can be made by this crawler.",
+      "default": 1000
+    },
+    "useBrowser": {
+      "title": "Use Playwright (for JS-rendered pages)",
+      "type": "boolean",
+      "description": "If true, use PlaywrightCrawler to measure load time and render JS-heavy pages (slower but more accurate).",
+      "default": false
+    },
+    "followInternalOnly": {
+      "title": "Follow internal links only",
+      "type": "boolean",
+      "description": "If true, only follow links within the same host as each start URL.",
+      "default": true
+    },
+    "checkExternalLinks": {
+      "title": "Check external links",
+      "type": "boolean",
+      "description": "If true, perform HTTP checks for external links (may increase runtime and requests).",
+      "default": false
+    },
+    "concurrency": {
+      "title": "Concurrency",
+      "type": "integer",
+      "description": "Number of parallel requests (CheerioCrawler). Lower for politeness.",
+      "default": 10
+    },
+    "requestTimeoutSecs": {
+      "title": "Request timeout (seconds)",
+      "type": "integer",
+      "description": "Per-request timeout in seconds.",
+      "default": 30
+    }
+  }
+}

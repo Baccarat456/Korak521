@@ -1,0 +1,48 @@
+{
+  "actorSpecification": 1,
+  "fields": {},
+  "views": {
+    "overview": {
+      "title": "Overview",
+      "transformation": {
+        "fields": [
+          "url",
+          "status_code",
+          "final_url",
+          "redirect_chain",
+          "broken",
+          "broken_reason",
+          "title",
+          "meta_description",
+          "h1",
+          "canonical",
+          "robots_noindex",
+          "images_missing_alt_count",
+          "internal_links_count",
+          "external_links_count",
+          "load_time_ms"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "url": { "label": "URL", "format": "link" },
+          "status_code": { "label": "Status", "format": "text" },
+          "final_url": { "label": "Final URL", "format": "link" },
+          "redirect_chain": { "label": "Redirects", "format": "text" },
+          "broken": { "label": "Broken", "format": "text" },
+          "broken_reason": { "label": "Reason", "format": "text" },
+          "title": { "label": "Title", "format": "text" },
+          "meta_description": { "label": "Meta description", "format": "text" },
+          "h1": { "label": "H1", "format": "text" },
+          "canonical": { "label": "Canonical", "format": "link" },
+          "robots_noindex": { "label": "Robots noindex", "format": "text" },
+          "images_missing_alt_count": { "label": "Images missing alt", "format": "text" },
+          "internal_links_count": { "label": "Internal links", "format": "text" },
+          "external_links_count": { "label": "External links", "format": "text" },
+          "load_time_ms": { "label": "Load time (ms)", "format": "text" }
+        }
+      }
+    }
+  }
+}

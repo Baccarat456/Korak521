@@ -1,0 +1,17 @@
+{
+  "actorSpecification": 1,
+  "name": "Broken link & SEO Auditor scraper",
+  "title": "Broken link & SEO Auditor scraper",
+  "description": "Audits websites for broken links and common on-page SEO issues (missing titles/meta, missing h1, canonical, robots, image alt, redirect chains, etc.).",
+  "version": "0.0",
+  "meta": {
+    "templateId": "ai-generated-actor",
+    "generatedBy": "Gpt-4o-mini"
+  },
+  "input": "./input_schema.json",
+  "output": "./output_schema.json",
+  "storages": {
+    "dataset": "./dataset_schema.json"
+  },
+  "dockerfile": "../Dockerfile"
+}
